@@ -17,8 +17,7 @@ class CreateTechnician extends CreateRecord
             Action::make('create')
                 ->label('Create')
                 ->color('primary')
-                ->action('create')
-                ->extraAttributes(['type' => 'submit']),
+                ->action('create'),
             Action::make('cancel')
                 ->label('Cancel')
                 ->color('primary')
