@@ -39,6 +39,10 @@ class PermissionResource extends Resource
             ->orderBy('roles.name', 'asc')
             ->orderBy('resources.name', 'asc');
     }
+    public static function getRecordRouteKeyName(): string
+    {
+        return 'permissions.id'; // Gunakan alias yang kita buat di query
+    }
     public static function form(Form $form): Form
     {
         return $form

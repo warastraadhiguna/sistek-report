@@ -40,6 +40,11 @@ class DeviceResource extends Resource
             ->orderBy('device_details.name', 'asc');
     }
 
+    public static function getRecordRouteKeyName(): string
+    {
+        return 'devices.id'; // Gunakan alias yang kita buat di query
+    }
+
     public static function form(Form $form): Form
     {
         return $form
